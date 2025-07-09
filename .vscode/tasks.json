@@ -1,0 +1,67 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "bank-frontend",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "bank/frontend"
+      },
+      "problemMatcher": [],
+      "panel": "dedicated"
+    },
+    {
+      "label": "bank-backend",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "bank/backend"
+      },
+      "problemMatcher": [],
+      "panel": "dedicated"
+    },
+    {
+      "label": "merchant",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "merchant"
+      },
+      "problemMatcher": [],
+      "panel": "dedicated"
+    },
+    {
+      "label": "gateway-frontend",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "gateway/frontend"
+      },
+      "problemMatcher": [],
+      "panel": "dedicated"
+    },
+    {
+      "label": "gateway-backend",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "gateway/backend"
+      },
+      "problemMatcher": [],
+      "panel": "dedicated"
+    },
+    {
+      "label": "Run All Services",
+      "dependsOn": [
+        "bank-frontend",
+        "bank-backend",
+        "merchant",
+        "gateway-frontend",
+        "gateway-backend"
+      ],
+      "dependsOrder": "parallel",
+      "type": "shell"
+    }
+  ]
+}
