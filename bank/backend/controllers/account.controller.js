@@ -86,6 +86,7 @@ const loginAccount = asyncHandler(async (req, res) => {
   const account = await Account.findOne({ customerId });
 
   const isPasswordCorrect = await account?.isPasswordCorrect(password);
+  console.log("Is password correct:", account, isPasswordCorrect);
 
   if (!account || !isPasswordCorrect) {
     authLogger.logLoginFailed(
