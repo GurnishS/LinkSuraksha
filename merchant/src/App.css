@@ -1,0 +1,143 @@
+@import "tailwindcss";
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+  background: #121212;
+  box-shadow: 0 0 10px #00BFFF66;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #00BFFF;
+}
+
+.search-bar {
+  flex: 1;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  background: #1f1f1f;
+  border: none;
+  color: white;
+  border-radius: 8px;
+}
+
+.icons svg {
+  color: #39FF14;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.hero {
+  background: url('/hero.jpg') no-repeat center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.cta {
+  padding: 0.75rem 1.5rem;
+  background: #00CED1;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta:hover {
+  background: #39FF14;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.add-cart {
+  background: #00CED1;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.checkout-flow {
+  padding: 2rem;
+}
+
+.checkout-step {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.checkout-step input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.footer {
+  background: #121212;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: #aaa;
+}
+
+.trust-badges span {
+  margin: 0 1rem;
+  font-size: 0.9rem;
+  color: #39FF14;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-pop-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+
