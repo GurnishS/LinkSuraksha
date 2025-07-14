@@ -8,8 +8,7 @@
       "options": {
         "cwd": "bank/frontend"
       },
-      "problemMatcher": [],
-      "panel": "dedicated"
+      "problemMatcher": []
     },
     {
       "label": "bank-backend",
@@ -18,8 +17,7 @@
       "options": {
         "cwd": "bank/backend"
       },
-      "problemMatcher": [],
-      "panel": "dedicated"
+      "problemMatcher": []
     },
     {
       "label": "merchant",
@@ -28,8 +26,7 @@
       "options": {
         "cwd": "merchant"
       },
-      "problemMatcher": [],
-      "panel": "dedicated"
+      "problemMatcher": []
     },
     {
       "label": "gateway-frontend",
@@ -38,8 +35,7 @@
       "options": {
         "cwd": "gateway/frontend"
       },
-      "problemMatcher": [],
-      "panel": "dedicated"
+      "problemMatcher": []
     },
     {
       "label": "gateway-backend",
@@ -48,12 +44,21 @@
       "options": {
         "cwd": "gateway/backend"
       },
-      "problemMatcher": [],
-      "panel": "dedicated"
+      "problemMatcher": []
+    },
+    {
+      "label": "dashboard",
+      "type": "shell",
+      "command": "npm run dev",
+      "options": {
+        "cwd": "dashboard"
+      },
+      "problemMatcher": []
     },
     {
       "label": "Run All Services",
       "dependsOn": [
+        "dashboard",
         "bank-frontend",
         "bank-backend",
         "merchant",

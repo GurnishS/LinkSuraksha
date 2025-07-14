@@ -22,8 +22,11 @@ app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 
-app.route("/").get((req, res) => {
-  res.send("LinkSuraksha Gateway is running!");
+app.route("/health").get((req, res) => {
+  res.status(200).json({
+    status: "ok",
+    timestamp: new Date().toISOString(),
+  });
 });
 
 import authRouter from "./routes/auth.routes.js";
