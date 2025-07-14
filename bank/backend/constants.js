@@ -7,7 +7,7 @@ dotenv.config();
 
 const config = {
   MODE: process.env.MODE,
-  CORS_ORIGIN: process.env.CORS_ORIGIN,
+  CORS_ORIGIN: "*",
   GATEWAY_BACKEND_URL: process.env.GATEWAY_BACKEND_URL,
   GATEWAY_FRONTEND_URL: process.env.GATEWAY_FRONTEND_URL,
 };

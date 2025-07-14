@@ -47,18 +47,18 @@
       "problemMatcher": []
     },
     {
-      "label": "dashboard",
+      "label": "home",
       "type": "shell",
       "command": "npm run dev",
       "options": {
-        "cwd": "dashboard"
+        "cwd": "home"
       },
       "problemMatcher": []
     },
     {
       "label": "Run All Services",
       "dependsOn": [
-        "dashboard",
+        "home",
         "bank-frontend",
         "bank-backend",
         "merchant",

@@ -85,7 +85,10 @@ const App = () => {
       description:
         "Our main secure payment gateway with advanced anonymization features ensuring complete privacy between sender and receiver",
       status: "Live",
-      url: "https://linksuraksha-client.onrender.com",
+      url:
+        MODE == "development"
+          ? "http://localhost:5174"
+          : "https://linksuraksha-client.onrender.com",
       icon: "🔐",
       tech: ["React", "Node.js", "MongoDB", "JWT", "Encryption", "SSE"],
       features: [
@@ -102,7 +105,10 @@ const App = () => {
       description:
         "Demo banking system showcasing secure account management and transaction monitoring capabilities of our gateway",
       status: "Live",
-      url: "https://surakshabank.onrender.com",
+      url:
+        MODE == "development"
+          ? "http://localhost:5173"
+          : "https://surakshabank.onrender.com",
       icon: "🏦",
       tech: ["React", "Express", "MongoDB", "Cryptography", "JWT"],
       features: [
@@ -120,7 +126,10 @@ const App = () => {
       description:
         "Demo e-commerce platform demonstrating integrated secure payments and anonymous checkout process",
       status: "Live",
-      url: "https://surakshakart.onrender.com",
+      url:
+        MODE == "development"
+          ? "http://localhost:5172"
+          : "https://surakshakart.onrender.com",
       icon: "🛒",
       tech: ["React", "Node.js", "MongoDB", "SSE"],
       features: [
