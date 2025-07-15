@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
-import { backendUri } from "../constants.js";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import {
   Mail,
@@ -15,6 +14,7 @@ import {
   Globe,
   QrCode,
 } from "lucide-react";
+import config from "../constants.js";
 
 export default function Login({ onSwitchView }) {
   const navigate = useNavigate();
@@ -50,7 +50,7 @@ export default function Login({ onSwitchView }) {
     setLoading(true);
 
     try {
-      const res = await fetch(`${backendUri}auth/login`, {
+      const res = await fetch(`${config.GATEWAY_BACKEND_URL}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

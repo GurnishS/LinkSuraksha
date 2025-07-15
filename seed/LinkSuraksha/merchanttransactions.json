@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "68734ea7d659c4306273a964"
+  },
+  "senderServiceId": null,
+  "receiverServiceId": {
+    "$oid": "6873278b38100cfe08ff1ff2"
+  },
+  "amount": 5999,
+  "status": "Completed",
+  "createdAt": {
+    "$date": "2025-07-13T06:13:59.057Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-13T06:15:10.922Z"
+  },
+  "__v": 0
+}]

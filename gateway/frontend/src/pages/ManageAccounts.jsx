@@ -29,8 +29,9 @@ import {
   Clock,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { avatarUri, backendUri } from "../constants";
+import { avatarUri } from "../constants";
 import Navbar from "../components/Navbar";
+import config from "../constants.js";
 
 // Helper function to get bank name from IFSC
 const getBankNameFromIFSC = (ifscCode) => {
@@ -570,7 +571,7 @@ const ManageAccounts = () => {
     setAccountsError(null);
 
     try {
-      const response = await fetch(`${backendUri}accounts`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${user.token}`,
@@ -659,7 +660,7 @@ const ManageAccounts = () => {
   const handleDeleteAccount = async (accountId) => {
     setLoading(true);
     try {
-      const response = await fetch(`${backendUri}accounts/link`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts/link`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -707,7 +708,7 @@ const ManageAccounts = () => {
   const handleUnlinkAccount = async (accountId) => {
     setLoading(true);
     try {
-      const response = await fetch(`${backendUri}accounts/unlink`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts/unlink`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -782,7 +783,7 @@ const ManageAccounts = () => {
         throw new Error("Gateway Pin must be 4-6 digits");
       }
 
-      const response = await fetch(backendUri + "accounts/link", {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts/link`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -858,7 +859,7 @@ const ManageAccounts = () => {
 
     setLoading(true);
     try {
-      const response = await fetch(`${backendUri}accounts/display-name`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts/display-name`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -924,7 +925,7 @@ const ManageAccounts = () => {
   const toggleMerchantStatus = async (account) => {
     setMerchantLoading(true);
     try {
-      const response = await fetch(`${backendUri}accounts/merchant/toggle`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts/merchant/toggle`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -1004,7 +1005,7 @@ const ManageAccounts = () => {
 
     setMerchantLoading(true);
     try {
-      const response = await fetch(`${backendUri}accounts/merchant/api-key`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts/merchant/api-key`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -1080,7 +1081,7 @@ const ManageAccounts = () => {
   const removeApiKey = async (apiKeyId) => {
     setMerchantLoading(true);
     try {
-      const response = await fetch(`${backendUri}accounts/merchant/api-key`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts/merchant/api-key`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

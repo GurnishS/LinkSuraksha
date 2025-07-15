@@ -28,8 +28,9 @@ import { useNavigate, useParams, useLocation } from "react-router-dom";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 import Scanner from "../components/Scanner.jsx";
-import { avatarUri, backendUri } from "../constants";
+import { avatarUri } from "../constants";
 import Navbar from "../components/Navbar.jsx";
+import config from "../constants.js";
 
 const TransferPage = () => {
   const navigate = useNavigate();
@@ -125,7 +126,7 @@ const TransferPage = () => {
 
     try {
       const response = await fetch(
-        `${backendUri}accounts/receiver/${receiverIdToVerify}`,
+        `${config.GATEWAY_BACKEND_URL}/api/accounts/receiver/${receiverIdToVerify}`,
         {
           method: "GET",
           headers: {
@@ -203,7 +204,7 @@ const TransferPage = () => {
   const fetchLinkedAccounts = async () => {
     setAccountsLoading(true);
     try {
-      const response = await fetch(`${backendUri}accounts`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${user.token}`,
@@ -405,7 +406,7 @@ const TransferPage = () => {
       };
 
       // Make API call
-      const response = await fetch(`${backendUri}accounts/transfer`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts/transfer`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

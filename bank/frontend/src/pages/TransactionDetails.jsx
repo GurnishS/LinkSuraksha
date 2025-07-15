@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Toastify from 'toastify-js';
 import 'toastify-js/src/toastify.css';
 import styles from "../styles/transaction-details.module.css";
-import { backendUri } from "../constants";
+import config from "../constants";
 
 const TransactionDetails = () => {
   const [transaction, setTransaction] = useState(null);
@@ -146,7 +146,7 @@ const TransactionDetails = () => {
         return;
       }
 
-      const response = await fetch(`${backendUri}accounts/transactions/${id}`, {
+      const response = await fetch(`${config.BANK_BACKEND_URL}/api/accounts/transactions/${id}`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${accessToken}`,

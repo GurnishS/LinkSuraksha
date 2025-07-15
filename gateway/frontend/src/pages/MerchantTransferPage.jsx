@@ -22,8 +22,9 @@ import {
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
-import { avatarUri, backendUri } from "../constants";
+import { avatarUri } from "../constants";
 import Navbar from "../components/Navbar.jsx";
+import config from "../constants.js";
 
 const MerchantTransferPage = () => {
   const navigate = useNavigate();
@@ -83,7 +84,7 @@ const MerchantTransferPage = () => {
 
     try {
       const response = await fetch(
-        `${backendUri}accounts/inquire-transaction/${transactionId}`,
+        `${config.GATEWAY_BACKEND_URL}/api/accounts/inquire-transaction/${transactionId}`,
         {
           method: "GET",
           headers: {
@@ -142,7 +143,7 @@ const MerchantTransferPage = () => {
 
     try {
       const response = await fetch(
-        `${backendUri}accounts/receiver/${receiverServiceAccount}`,
+        `${config.GATEWAY_BACKEND_URL}/api/accounts/receiver/${receiverServiceAccount}`,
         {
           method: "GET",
           headers: {
@@ -180,7 +181,7 @@ const MerchantTransferPage = () => {
   const fetchLinkedAccounts = async () => {
     setAccountsLoading(true);
     try {
-      const response = await fetch(`${backendUri}accounts`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${user.token}`,
@@ -290,7 +291,7 @@ const MerchantTransferPage = () => {
       }
 
       // Submit transfer request
-      const response = await fetch(`${backendUri}accounts/transfer`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts/transfer`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Toastify from 'toastify-js';
 import 'toastify-js/src/toastify.css';
 import styles from "../styles/linkGateway.module.css";
-import { backendUri, gatewayFrontendUri, gatewayUri } from "../constants";
+import config from "../constants";
 
 const LinkPaymentGateway = () => {
   const [formData, setFormData] = useState({
@@ -75,7 +75,7 @@ const LinkPaymentGateway = () => {
     setLoading(true);
     
     try {
-      const response = await fetch(`${gatewayUri}link`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/bank/link`, {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -103,7 +103,7 @@ const LinkPaymentGateway = () => {
       showToast("Network error. Please try again.", "error");
     } finally {
       setLoading(false);
-      window.location.href = gatewayFrontendUri+"/manage-accounts";
+      window.location.href = "/gateway-frontend/manage-accounts";
     }
   };
 

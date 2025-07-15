@@ -25,9 +25,10 @@ import {
 import { useNavigate } from "react-router-dom";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
-import { avatarUri, backendUri } from "../constants";
+import { avatarUri } from "../constants";
 import Chart from "react-apexcharts";
 import Navbar from "../components/Navbar";
+import config from "../constants.js";
 
 const Transactions = () => {
   const navigate = useNavigate();
@@ -65,7 +66,7 @@ const Transactions = () => {
     setError(null);
 
     try {
-      const response = await fetch(`${backendUri}accounts/transactions`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts/transactions`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${user.token}`,

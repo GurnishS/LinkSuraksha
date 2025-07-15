@@ -3,7 +3,6 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 import { httpLogger } from "./utils/logger/index.js";
-import config from "./constants.js";
 import { GenerateToken } from "./utils/SharedTokenHandler.js";
 import { verifySharedJWT } from "./middleware/gateway-auth.middleware.js";
 
@@ -17,7 +16,7 @@ app.use(httpLogger);
 
 app.use(
   cors({
-    origin: config.CORS_ORIGIN,
+    origin: process.env.CORS_ORIGIN,
     credentials: true,
   })
 );

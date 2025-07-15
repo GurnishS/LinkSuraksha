@@ -16,7 +16,6 @@ import { MerchantTransaction } from "../models/merchant-transaction.model.js";
 import mongoose, { Mongoose } from "mongoose";
 import merchantTransactionStatus from "../enums/merchant-transaction-status.js";
 import { sendMerchantNotification } from "../utils/merchantSSESerivice.js";
-
 import config from "../constants.js";
 
 const fetchAccountInfo = async (accountToken) => {
@@ -287,7 +286,7 @@ const linkAccount = asyncHandler(async (req, res) => {
             customerId: existingAccount.customerId,
             ifscCode: existingAccount.ifscCode,
           },
-          redirect: `${config.BANK_FRONTEND_URL}/link/${existingAccount.customerId}/${token}`,
+          redirect: `bank-frontend/link/${existingAccount.customerId}/${token}`,
         });
       }
     }
@@ -321,7 +320,7 @@ const linkAccount = asyncHandler(async (req, res) => {
   res.status(201).json({
     success: true,
     account,
-    redirect: `${config.BANK_FRONTEND_URL}/link/${customerId}/${token}`,
+    redirect: `bank-frontend/link/${customerId}/${token}`,
   });
 });
 

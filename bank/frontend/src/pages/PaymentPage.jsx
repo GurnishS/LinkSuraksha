@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 import styles from "../styles/payment-page.module.css";
-import { backendUri } from "../constants";
+import config from "../constants";
 
 const Transfer = () => {
   const [accountData, setAccountData] = useState(null);
@@ -107,7 +107,7 @@ const Transfer = () => {
         return;
       }
 
-      const response = await fetch(`${backendUri}accounts`, {
+      const response = await fetch(`${config.BANK_BACKEND_URL}/api/accounts`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -150,7 +150,7 @@ const Transfer = () => {
     try {
       const accessToken = sessionStorage.getItem("accessToken");
 
-      const response = await fetch(`${backendUri}accounts/transfer`, {
+      const response = await fetch(`${config.BANK_BACKEND_URL}/api/accounts/transfer`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accessToken}`,

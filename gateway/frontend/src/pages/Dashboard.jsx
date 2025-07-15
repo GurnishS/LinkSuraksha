@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { avatarUri, backendUri } from "../constants.js";
+import { avatarUri } from "../constants.js";
 import QRCode from "react-qr-code";
 // import { Html5QrcodeScanner } from "html5-qrcode";
 import Scanner from "../components/Scanner.jsx";
@@ -33,6 +33,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 import Navbar from "../components/Navbar.jsx";
+import config from "../constants.js";
 
 const Dashboard = () => {
   const [showBalance, setShowBalance] = useState(true);
@@ -74,7 +75,7 @@ const Dashboard = () => {
     setAccountsError(null);
 
     try {
-      const response = await fetch(`${backendUri}accounts`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${user.token}`,
@@ -135,7 +136,7 @@ const Dashboard = () => {
     setTransactionsError(null);
 
     try {
-      const response = await fetch(`${backendUri}accounts/transactions`, {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/accounts/transactions`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${user.token}`,

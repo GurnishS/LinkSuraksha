@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
-import { backendUri } from "../constants";
 import { useNavigate } from "react-router-dom";
 import {
   Mail,
@@ -19,6 +18,7 @@ import {
   CheckCircle,
   Smartphone,
 } from "lucide-react";
+import config from "../constants.js";
 
 export default function Register({ onSwitchView }) {
   const navigate = useNavigate();
@@ -62,7 +62,7 @@ export default function Register({ onSwitchView }) {
     setLoading(true);
 
     try {
-      const response = await fetch(backendUri + "auth/register", {
+      const response = await fetch(`${config.GATEWAY_BACKEND_URL}/api/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,0 +1,150 @@
+[{
+  "_id": {
+    "$oid": "68732134e92e6a194f3c7b3c"
+  },
+  "accountNumber": "123456789119",
+  "accountHolder": "Raj Singhal",
+  "customerId": "CUST2025006",
+  "branchName": "Bharatpur, Rajasthan",
+  "address": "Bharatpur, Rajasthan",
+  "phone": "+91-9876543215",
+  "ifscCode": "LINK0001237",
+  "balance": 43874394,
+  "password": "$2b$10$YGThVssmiP8.v4EoPN44sukAx.GVGk3eUWSc9.okF.8Qv45010TkK",
+  "transactionPin": "$2b$10$b8dvKmrxW.gwRSCOPuuageNnyXL42xU7gu9OcyAbIvfw47927QFfS",
+  "accessToken": null,
+  "userId": null,
+  "accountToken": null,
+  "createdAt": {
+    "$date": "2025-07-13T03:00:04.063Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-13T03:00:04.063Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68732156e92e6a194f3c7b40"
+  },
+  "accountNumber": "123456789014",
+  "accountHolder": "Link Suraksha",
+  "customerId": "CUST2025001",
+  "branchName": "Kota, Rajasthan",
+  "address": "Kota, Rajasthan",
+  "phone": "+91-9876543210",
+  "ifscCode": "LINK0000001",
+  "balance": 0,
+  "password": "$2b$10$MHzrZXmCQOiPjjRDmkbpoeOnlzkIl5.ClxaT5DgNoO6R5C5jV5mL6",
+  "transactionPin": "$2b$10$MaqUqhts93aoSmFG.Eax4.8.hUmi/QSDAbxYOUQ7Suehn4obkBHSe",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODczMjE1NmU5MmU2YTE5NGYzYzdiNDAiLCJhY2NvdW50TnVtYmVyIjoiMTIzNDU2Nzg5MDE0IiwiYWNjb3VudEhvbGRlciI6IkxpbmsgU3VyYWtzaGEiLCJjdXN0b21lcklkIjoiQ1VTVDIwMjUwMDEiLCJpYXQiOjE3NTIzNzc2ODcsImV4cCI6MTc1MjM4MTI4N30.fRLn7hrTqsIvbj9yx2SGRAP4uX3uXBzZ_DQESYzsWa8",
+  "userId": "68732b7f38100cfe08ff204b",
+  "accountToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODczMjE1NmU5MmU2YTE5NGYzYzdiNDAiLCJhY2NvdW50TnVtYmVyIjoiMTIzNDU2Nzg5MDE0IiwiY3VzdG9tZXJJZCI6IkNVU1QyMDI1MDAxIiwidXNlcklkIjoiNjg3MzJiN2YzODEwMGNmZTA4ZmYyMDRiIiwiaWF0IjoxNzUyMzc4MzQ2LCJleHAiOjE3NTQ5NzAzNDZ9.gZEYSg94RBjf3u27z-8J301BwhQ-Kr_Swreg7OcqGzY",
+  "createdAt": {
+    "$date": "2025-07-13T03:00:38.494Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-13T06:15:10.511Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "687321f5229d74f8fe6485b4"
+  },
+  "accountNumber": "123456789115",
+  "accountHolder": "Gurnish Singh",
+  "customerId": "CUST2025002",
+  "branchName": "Kota, Rajasthan",
+  "address": "Kota, Rajasthan",
+  "phone": "+91-9876543211",
+  "ifscCode": "LINK0001234",
+  "balance": 98946009.99,
+  "password": "$2b$10$xFtTh.XSxkW4iQz1VT4VzuBPB.nYVeuOIjL9qbDJrBT73jUIm1Tye",
+  "transactionPin": "$2b$10$lNSWy2Eh0sJq9CD9vd1WeOk0o7gXzxtWWlpAWOFPB0ljIGudZ3a/S",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODczMjFmNTIyOWQ3NGY4ZmU2NDg1YjQiLCJhY2NvdW50TnVtYmVyIjoiMTIzNDU2Nzg5MTE1IiwiYWNjb3VudEhvbGRlciI6Ikd1cm5pc2ggU2luZ2giLCJjdXN0b21lcklkIjoiQ1VTVDIwMjUwMDIiLCJpYXQiOjE3NTI0NzU1NDYsImV4cCI6MTc1MjQ3OTE0Nn0.tfLGJq5PjjkaSF5Vx9HQctBBylDzkjQS9K81Eex94JY",
+  "userId": "68732447f8ba68dac9a75ae4",
+  "accountToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODczMjFmNTIyOWQ3NGY4ZmU2NDg1YjQiLCJhY2NvdW50TnVtYmVyIjoiMTIzNDU2Nzg5MTE1IiwiY3VzdG9tZXJJZCI6IkNVU1QyMDI1MDAyIiwidXNlcklkIjoiNjg3MzI0NDdmOGJhNjhkYWM5YTc1YWU0IiwiaWF0IjoxNzUyMzc3MjI2LCJleHAiOjE3NTQ5NjkyMjZ9.PexUBst4X7Yp3f74fv24TpNNz31FX779cH9bLPhpQ-o",
+  "createdAt": {
+    "$date": "2025-07-13T03:03:17.906Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-14T06:45:46.550Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68732225229d74f8fe6485b8"
+  },
+  "accountNumber": "123456789116",
+  "accountHolder": "Amandeep Mandal",
+  "customerId": "CUST2025003",
+  "branchName": "Jaipur, Rajasthan",
+  "address": "Jaipur, Rajasthan",
+  "phone": "+91-9876543212",
+  "ifscCode": "LINK0001235",
+  "balance": 63826133.01,
+  "password": "$2b$10$a4.9Jq49nCgXS18ankAFPeqa6wxAAWgcnIgQWfkoploAS2TSPa7b6",
+  "transactionPin": "$2b$10$7R88y5g2tDMP8D.qhXz5N.EWMNUdzAzBa6ksbNGMNw4kMdzb10Z2a",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODczMjIyNTIyOWQ3NGY4ZmU2NDg1YjgiLCJhY2NvdW50TnVtYmVyIjoiMTIzNDU2Nzg5MTE2IiwiYWNjb3VudEhvbGRlciI6IkFtYW5kZWVwIE1hbmRhbCIsImN1c3RvbWVySWQiOiJDVVNUMjAyNTAwMyIsImlhdCI6MTc1MjM3NjM1MywiZXhwIjoxNzUyMzc5OTUzfQ.7rug6jYys030h6pvcZ9Q51aTqi41Dpb4ecX8144D4Us",
+  "userId": "6873281238100cfe08ff2002",
+  "accountToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODczMjIyNTIyOWQ3NGY4ZmU2NDg1YjgiLCJhY2NvdW50TnVtYmVyIjoiMTIzNDU2Nzg5MTE2IiwiY3VzdG9tZXJJZCI6IkNVU1QyMDI1MDAzIiwidXNlcklkIjoiNjg3MzI4MTIzODEwMGNmZTA4ZmYyMDAyIiwiaWF0IjoxNzUyMzc3NDEwLCJleHAiOjE3NTQ5Njk0MTB9.4ls1l4qIGVoqmiLkuIMvvMdJFLSJcE1z0RGIkSPbQdc",
+  "createdAt": {
+    "$date": "2025-07-13T03:04:05.546Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-13T06:15:09.837Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68732267229d74f8fe6485bc"
+  },
+  "accountNumber": "123456789117",
+  "accountHolder": "Harshraj",
+  "customerId": "CUST2025004",
+  "branchName": "Kota, Rajasthan",
+  "address": "Kota, Rajasthan",
+  "phone": "+91-9876543213",
+  "ifscCode": "LINK0001236",
+  "balance": 3432,
+  "password": "$2b$10$YqFGSiQ/x0nuBt8T3TtIu.V7GbJspfTnWU/XfFloUbPTqB458yfS6",
+  "transactionPin": "$2b$10$irveUoeFF.HZbV6NtRK9zO3AYIMJ7L6vmeYp/BRqcmeFEiMLvve4m",
+  "accessToken": null,
+  "userId": null,
+  "accountToken": null,
+  "createdAt": {
+    "$date": "2025-07-13T03:05:11.017Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-13T03:05:11.017Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "687322f3229d74f8fe6485c0"
+  },
+  "accountNumber": "123456789118",
+  "accountHolder": "Vinay Kumar",
+  "customerId": "CUST2025005",
+  "branchName": "Lucknow, UP",
+  "address": "Lucknow, UP",
+  "phone": "+91-9876543214",
+  "ifscCode": "LINK0001236",
+  "balance": 0,
+  "password": "$2b$10$XoRML8go4shUKpYw/qMJauK5.vL46G5YPcYHS9pFSguc3/gQzw8BO",
+  "transactionPin": "$2b$10$GX15i3Z8NUcRN9QP0RzB6ezKkNqA0GwGpHLpemvmy4YlcVoRdPCbW",
+  "accessToken": null,
+  "userId": null,
+  "accountToken": null,
+  "createdAt": {
+    "$date": "2025-07-13T03:07:31.117Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-13T03:07:31.117Z"
+  },
+  "__v": 0
+}]

@@ -1,7 +1,7 @@
-import { backendUri } from "../constants.js";
+import config from "../../../backend/constants";
 
 export function connectToSSE(userId, onMessage) {
-  const eventSource = new EventSource(`${backendUri}sse/notifications`, {
+  const eventSource = new EventSource(`${config.GATEWAY_BACKEND_URL}/api/sse/notifications`, {
     withCredentials: false,
   });
 

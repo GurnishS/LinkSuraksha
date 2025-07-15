@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "6873277e38100cfe08ff1fea"
+  },
+  "accountNumber": "123456789115",
+  "accountHolder": "Gurnish Singh",
+  "customerId": "CUST2025002",
+  "ifscCode": "LINK0001234",
+  "accountToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODczMjFmNTIyOWQ3NGY4ZmU2NDg1YjQiLCJhY2NvdW50TnVtYmVyIjoiMTIzNDU2Nzg5MTE1IiwiY3VzdG9tZXJJZCI6IkNVU1QyMDI1MDAyIiwidXNlcklkIjoiNjg3MzI0NDdmOGJhNjhkYWM5YTc1YWU0IiwiaWF0IjoxNzUyMzc3MjI2LCJleHAiOjE3NTQ5NjkyMjZ9.PexUBst4X7Yp3f74fv24TpNNz31FX779cH9bLPhpQ-o",
+  "status": "Verified",
+  "gatewayPin": "$2b$10$JMNIBTYWQQkDH1YmAjS7RuA5ONKO7TMuBLEqcNRIkS8JzvgsFPswe",
+  "isMerchant": true,
+  "userId": {
+    "$oid": "68732447f8ba68dac9a75ae4"
+  },
+  "apiKeys": [
+    {
+      "name": "SurakshaKart",
+      "key": "b58s33eoyzmz8jp39fau91752386942128",
+      "secret": "tfu0o1fi7jb3aqcea2gp61752386942128",
+      "_id": {
+        "$oid": "68734d7ed659c4306273a95a"
+      },
+      "createdAt": {
+        "$date": "2025-07-13T06:09:02.129Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-07-13T03:26:54.030Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-13T06:09:02.131Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6873283338100cfe08ff2010"
+  },
+  "accountNumber": "123456789116",
+  "accountHolder": "Amandeep Mandal",
+  "customerId": "CUST2025003",
+  "ifscCode": "LINK0001235",
+  "accountToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODczMjIyNTIyOWQ3NGY4ZmU2NDg1YjgiLCJhY2NvdW50TnVtYmVyIjoiMTIzNDU2Nzg5MTE2IiwiY3VzdG9tZXJJZCI6IkNVU1QyMDI1MDAzIiwidXNlcklkIjoiNjg3MzI4MTIzODEwMGNmZTA4ZmYyMDAyIiwiaWF0IjoxNzUyMzc3NDEwLCJleHAiOjE3NTQ5Njk0MTB9.4ls1l4qIGVoqmiLkuIMvvMdJFLSJcE1z0RGIkSPbQdc",
+  "status": "Verified",
+  "gatewayPin": "$2b$10$BA5LodNoOtrtFl/nkXbmFep86wUJ2/voq9wEe/DZajCnVM7khyhd2",
+  "isMerchant": false,
+  "userId": {
+    "$oid": "6873281238100cfe08ff2002"
+  },
+  "apiKeys": [],
+  "createdAt": {
+    "$date": "2025-07-13T03:29:55.299Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-13T03:30:10.477Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68732bde38100cfe08ff2066"
+  },
+  "accountNumber": "123456789014",
+  "accountHolder": "Link Suraksha",
+  "customerId": "CUST2025001",
+  "ifscCode": "LINK0000001",
+  "accountToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODczMjE1NmU5MmU2YTE5NGYzYzdiNDAiLCJhY2NvdW50TnVtYmVyIjoiMTIzNDU2Nzg5MDE0IiwiY3VzdG9tZXJJZCI6IkNVU1QyMDI1MDAxIiwidXNlcklkIjoiNjg3MzJiN2YzODEwMGNmZTA4ZmYyMDRiIiwiaWF0IjoxNzUyMzc4MzQ2LCJleHAiOjE3NTQ5NzAzNDZ9.gZEYSg94RBjf3u27z-8J301BwhQ-Kr_Swreg7OcqGzY",
+  "status": "Verified",
+  "gatewayPin": "$2b$10$8N5Q8s/2CGRIyN14qQi6W.bAiUfAv.IU6Bm.qOI3ALy/TYdZVPyLy",
+  "isMerchant": false,
+  "userId": {
+    "$oid": "68732b7f38100cfe08ff204b"
+  },
+  "apiKeys": [],
+  "createdAt": {
+    "$date": "2025-07-13T03:45:34.477Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-13T03:45:47.041Z"
+  },
+  "__v": 0
+}]

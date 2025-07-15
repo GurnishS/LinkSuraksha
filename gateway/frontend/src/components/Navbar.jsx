@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
-import { avatarUri, backendUri } from "../constants.js";
+import { avatarUri} from "../constants.js";
 import {
   CreditCard,
   Send,
@@ -61,7 +61,7 @@ const Navbar = () => {
     if (!token) return;
     console.log("Connecting to SSE with token:", token);
     const eventSource = new EventSource(
-      `${backendUri}sse/notifications?token=${token}`,
+      `/gateway-backend/api/sse/notifications?token=${token}`,
       {
         withCredentials: false, // SSE spec doesn’t support custom headers
       }

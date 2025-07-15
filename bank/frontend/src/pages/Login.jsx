@@ -2,7 +2,9 @@ import { useState } from "react";
 import Toastify from 'toastify-js';
 import 'toastify-js/src/toastify.css';
 import styles from "../styles/login.module.css";
-import { backendUri } from "../constants";
+import config from "../constants.js";
+
+console.log("Config",config);
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -53,7 +55,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(backendUri+"accounts/login", {
+      const response = await fetch(`${config.BANK_BACKEND_URL}/api/accounts/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

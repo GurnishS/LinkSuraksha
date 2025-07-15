@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "68732447f8ba68dac9a75ae4"
+  },
+  "name": "Gurnish",
+  "email": "gurnish@gmail.com",
+  "address": "Kota Rajasthan",
+  "password": "$2b$10$81/zCMOa2GJo13bC7y0pYOtfUYgy.W/95SNzv.ujYbDEUVlAJfRyu",
+  "role": "User",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODczMjQ0N2Y4YmE2OGRhYzlhNzVhZTQiLCJlbWFpbCI6Imd1cm5pc2hAZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJpYXQiOjE3NTIzODY5MTQsImV4cCI6MTc1MjM5MDUxNH0.8j01YGkX3uQv92suW6xKScQ1kC4mdzeFzlR7qXm8DAo",
+  "createdAt": {
+    "$date": "2025-07-13T03:13:11.933Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-13T06:08:34.861Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6873281238100cfe08ff2002"
+  },
+  "name": "Amandeep Mandal",
+  "email": "amandeep@gmail.com",
+  "address": "Kota Rajasthan",
+  "password": "$2b$10$Qm3FbevbrpF4qKutAphT5OCrhb0T/zWpsjQ1aswXhQGtJevr6a66i",
+  "role": "User",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODczMjgxMjM4MTAwY2ZlMDhmZjIwMDIiLCJlbWFpbCI6ImFtYW5kZWVwQGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiaWF0IjoxNzUyNDY0MDM3LCJleHAiOjE3NTI0Njc2Mzd9.gbc6yssQy252OAbG4_Q5ji9YueAseGjgWiTzEI4vTYc",
+  "createdAt": {
+    "$date": "2025-07-13T03:29:22.812Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-14T03:33:57.670Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68732b7f38100cfe08ff204b"
+  },
+  "name": "Link Suraksha",
+  "email": "linksuraksha@gmail.com",
+  "address": "Kota Rajasthan",
+  "password": "$2b$10$o5fEmGvbchdFVAmCFxdqSOrZ8Y9L1Cy6mmDXUOxuA8f3c3zWZJ6FG",
+  "role": "User",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODczMmI3ZjM4MTAwY2ZlMDhmZjIwNGIiLCJlbWFpbCI6ImxpbmtzdXJha3NoYUBnbWFpbC5jb20iLCJyb2xlIjoiVXNlciIsImlhdCI6MTc1MjM3ODI0NywiZXhwIjoxNzUyMzgxODQ3fQ.BH1TY42yuqJl4EPWU5Fu0CtIJp8A14tMTnh3AqQS7wQ",
+  "createdAt": {
+    "$date": "2025-07-13T03:43:59.624Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-13T03:44:07.776Z"
+  },
+  "__v": 0
+}]

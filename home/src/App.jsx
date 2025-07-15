@@ -10,6 +10,7 @@ import {
   Linkedin,
 } from "lucide-react";
 import "./App.css";
+import config from "./constants";
 
 const App = () => {
   const [apiStatuses, setApiStatuses] = useState({
@@ -23,14 +24,8 @@ const App = () => {
   console.log("Current Mode:", MODE);
 
   const endpoints = {
-    gateway:
-      MODE == "development"
-        ? "http://localhost:8001/health"
-        : "https://linksuraksha-server.onrender.com/health",
-    bank:
-      MODE == "development"
-        ? "http://localhost:8000/health"
-        : "https://surakshabank-1.onrender.com/health",
+    gateway: config.GATEWAY_BACKEND_URL,
+    bank: config.BANK_BACKEND_URL
   };
 
   console.log("API Endpoints:", endpoints);
@@ -85,10 +80,7 @@ const App = () => {
       description:
         "Our main secure payment gateway with advanced anonymization features ensuring complete privacy between sender and receiver",
       status: "Live",
-      url:
-        MODE == "development"
-          ? "http://localhost:5174"
-          : "https://linksuraksha-client.onrender.com",
+      url:config.GATEWAY_URL,
       icon: "🔐",
       tech: ["React", "Node.js", "MongoDB", "JWT", "Encryption", "SSE"],
       features: [
@@ -105,10 +97,7 @@ const App = () => {
       description:
         "Demo banking system showcasing secure account management and transaction monitoring capabilities of our gateway",
       status: "Live",
-      url:
-        MODE == "development"
-          ? "http://localhost:5173"
-          : "https://surakshabank.onrender.com",
+      url:config.BANK_URL,
       icon: "🏦",
       tech: ["React", "Express", "MongoDB", "Cryptography", "JWT"],
       features: [
@@ -126,10 +115,7 @@ const App = () => {
       description:
         "Demo e-commerce platform demonstrating integrated secure payments and anonymous checkout process",
       status: "Live",
-      url:
-        MODE == "development"
-          ? "http://localhost:5172"
-          : "https://surakshakart.onrender.com",
+      url:config.MERCHANT_URL,
       icon: "🛒",
       tech: ["React", "Node.js", "MongoDB", "SSE"],
       features: [
