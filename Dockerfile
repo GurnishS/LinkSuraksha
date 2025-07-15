@@ -46,6 +46,6 @@ CMD mongod --bind_ip 0.0.0.0 --replSet rs0 --fork --logpath /var/log/mongodb.log
     done && \
     tail -f /var/log/mongodb.log
 
-96# Run commands
+# Run commands
 # docker build -t mongo-seeded .
 # docker run -p 27017:27017 mongo-seeded
