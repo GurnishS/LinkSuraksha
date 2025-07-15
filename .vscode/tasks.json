@@ -6,7 +6,7 @@
       "type": "shell",
       "command": "npm install && npm run dev",
       "options": {
-        "cwd": "bank/frontend"
+        "cwd": "${workspaceFolder}/bank/frontend"
       },
       "problemMatcher": []
     },
@@ -15,7 +15,7 @@
       "type": "shell",
       "command": "npm install && npm run dev",
       "options": {
-        "cwd": "bank/backend"
+        "cwd": "${workspaceFolder}/bank/backend"
       },
       "problemMatcher": []
     },
@@ -24,7 +24,7 @@
       "type": "shell",
       "command": "npm install && npm run dev",
       "options": {
-        "cwd": "merchant"
+        "cwd": "${workspaceFolder}/merchant"
       },
       "problemMatcher": []
     },
@@ -33,7 +33,7 @@
       "type": "shell",
       "command": "npm install && npm run dev",
       "options": {
-        "cwd": "gateway/frontend"
+        "cwd": "${workspaceFolder}/gateway/frontend"
       },
       "problemMatcher": []
     },
@@ -42,7 +42,7 @@
       "type": "shell",
       "command": "npm install && npm run dev",
       "options": {
-        "cwd": "gateway/backend"
+        "cwd": "${workspaceFolder}/gateway/backend"
       },
       "problemMatcher": []
     },
@@ -51,7 +51,7 @@
       "type": "shell",
       "command": "npm install && npm run dev",
       "options": {
-        "cwd": "home"
+        "cwd": "${workspaceFolder}/home"
       },
       "problemMatcher": []
     },
