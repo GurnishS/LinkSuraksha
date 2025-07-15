@@ -4,7 +4,7 @@
     {
       "label": "bank-frontend",
       "type": "shell",
-      "command": "npm run dev",
+      "command": "npm install && npm run dev",
       "options": {
         "cwd": "bank/frontend"
       },
@@ -13,7 +13,7 @@
     {
       "label": "bank-backend",
       "type": "shell",
-      "command": "npm run dev",
+      "command": "npm install && npm run dev",
       "options": {
         "cwd": "bank/backend"
       },
@@ -22,7 +22,7 @@
     {
       "label": "merchant",
       "type": "shell",
-      "command": "npm run dev",
+      "command": "npm install && npm run dev",
       "options": {
         "cwd": "merchant"
       },
@@ -31,7 +31,7 @@
     {
       "label": "gateway-frontend",
       "type": "shell",
-      "command": "npm run dev",
+      "command": "npm install && npm run dev",
       "options": {
         "cwd": "gateway/frontend"
       },
@@ -40,7 +40,7 @@
     {
       "label": "gateway-backend",
       "type": "shell",
-      "command": "npm run dev",
+      "command": "npm install && npm run dev",
       "options": {
         "cwd": "gateway/backend"
       },
@@ -49,7 +49,7 @@
     {
       "label": "home",
       "type": "shell",
-      "command": "npm run dev",
+      "command": "npm install && npm run dev",
       "options": {
         "cwd": "home"
       },

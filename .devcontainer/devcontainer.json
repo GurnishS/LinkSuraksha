@@ -1,0 +1,7 @@
+{
+  "name": "Codespace with MongoDB Seed",
+  "forwardPorts": [
+    27017
+  ],
+  "postCreateCommand": "docker pull gurnishsingh/mongodb-seeded:latest && docker run -d --rm --name mongodb-seeded -p 27017:27017 gurnishsingh/mongodb-seeded:latest",
+}
