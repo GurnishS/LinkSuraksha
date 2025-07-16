@@ -363,13 +363,10 @@ export default function Login({ onSwitchView }) {
           {/* Trust Indicators */}
           <div className="mt-8 text-center">
             <p className="text-xs text-gray-500 mb-4">
-              Trusted by leading banks
+              Trusted by:
             </p>
             <div className="flex justify-center items-center space-x-6 opacity-60">
-              <div className="text-xs font-semibold text-gray-400">SBI</div>
-              <div className="text-xs font-semibold text-gray-400">HDFC</div>
-              <div className="text-xs font-semibold text-gray-400">ICICI</div>
-              <div className="text-xs font-semibold text-gray-400">AXIS</div>
+              <div className="text-xs font-semibold text-gray-400">Canara Bank</div>
             </div>
           </div>
         </div>
