@@ -14,14 +14,13 @@
 - **Role-based Access** - Admin and user role separation
 
 ## Screenshots
-
-<div align="center">
+<div>
   <strong>Payment via Account Number</strong>
 </div>
 
 ![alt text](images/LinkSuraksha-Demo[gif].gif)
 
-<div align="center">
+<div>
   <strong>Payment via QR</strong>
 </div>
 
