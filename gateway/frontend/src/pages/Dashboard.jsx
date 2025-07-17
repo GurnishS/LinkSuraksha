@@ -281,7 +281,7 @@ const Dashboard = () => {
   const generateQRCode = (account) => {
     const qrData = {
       receiverServiceAccount: account.receiverServiceAccount,
-      url: `${window.location.origin}/transfer/${account.receiverServiceAccount}`,
+      url: `/transfer/${account.receiverServiceAccount}`,
       gateway: "LinkSuraksha",
     };
     return JSON.stringify(qrData);
@@ -413,60 +413,86 @@ const Dashboard = () => {
     </div>
   );
 
+  // Helper function to validate MongoDB ObjectId
+  const isValidObjectId = (id) => {
+    const objectIdRegex = /^[0-9a-fA-F]{24}$/;
+    return objectIdRegex.test(id);
+  };
+
+  // Helper function to extract receiver Id from QR URL
+  const extractReceiverIdFromUrl = (url) => {
+    try {
+      const urlObj = new URL(url);
+      const pathParts = urlObj.pathname.split("/");
+
+      // Check if it's a transfer URL pattern
+      if (pathParts.length >= 3 && pathParts[1] === "transfer") {
+        const receiverId = pathParts[2];
+        if (isValidObjectId(receiverId)) {
+          return receiverId;
+        }
+      }
+      return null;
+    } catch {
+      return null;
+    }
+  };
+
   // Handle QR scan result
   const handleQRScan = (scannedData) => {
-    console.log(scannedData);
+    console.log("QR scanned data:", scannedData);
+    
+    // Close scanner immediately
+    setShowQRScanner(false);
+    
     try {
-      // First, try to extract receiver Id from URL
-      const extractReceiverIdFromUrl = (url) => {
-        try {
-          const urlObj = new URL(url);
-          const pathParts = urlObj.pathname.split("/");
-
-          // Check if it's a transfer URL pattern
-          if (pathParts.length >= 3 && pathParts[1] === "transfer") {
-            const receiverId = pathParts[2];
-            // Validate MongoDB ObjectId format
-            const objectIdRegex = /^[0-9a-fA-F]{24}$/;
-            if (objectIdRegex.test(receiverId)) {
-              return receiverId;
-            }
-          }
-          return null;
-        } catch {
-          return null;
-        }
-      };
-
-      const extractedReceiverId = extractReceiverIdFromUrl(scannedData);
-
-      if (extractedReceiverId) {
-        // Close scanner modal
-        setShowQRScanner(false);
+      // First, try to parse as JSON (LinkSuraksha QR format)
+      const qrData = JSON.parse(scannedData);
+      if (qrData.receiverServiceAccount) {
+        console.log("Found receiver service account:", qrData.receiverServiceAccount);
+        
+        // Use setTimeout to ensure state update completes before navigation
+        setTimeout(() => {
+          navigate(`/transfer/${qrData.receiverServiceAccount}`);
+        }, 100);
+        
+        Toastify({
+          text: "QR code scanned! Redirecting...",
+          backgroundColor: "#4BB543",
+          gravity: "top",
+          position: "right",
+          duration: 2000,
+        }).showToast();
         return;
       }
-
-      // Try to parse as JSON (for LinkSuraksha QR codes)
-      const parsedData = JSON.parse(scannedData);
-      if (parsedData.receiverServiceAccount) {
-        // Close scanner modal
-        setShowQRScanner(false);
+      if (qrData.transactionId) {
+        console.log("Found transactionId:", qrData.transactionId);
+        
+        // Use setTimeout to ensure state update completes before navigation
+        setTimeout(() => {
+          navigate(`/merchant/${qrData.transactionId}`);
+        }, 100);
+        
+        Toastify({
+          text: "QR code scanned! Redirecting...",
+          backgroundColor: "#4BB543",
+          gravity: "top",
+          position: "right",
+          duration: 2000,
+        }).showToast();
         return;
       }
     } catch {
-      // If not JSON or URL, treat as plain service account
-      // Close scanner modal
-      setShowQRScanner(false);
-      // Navigate to transfer page
-      navigate("/transfer");
+      console.log("Not JSON format, trying URL extraction...");
     }
 
+    // If we reach here, QR code format was not recognized
     Toastify({
-      text: "QR code scanned successfully!",
-      backgroundColor: "#4BB543",
+      text: "Invalid QR code format. Please try again.",
+      backgroundColor: "#DC2626",
       gravity: "top",
       position: "right",
-      duration: 2000,
+      duration: 3000,
     }).showToast();
   };
 

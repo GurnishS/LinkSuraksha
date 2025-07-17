@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import QRCode from "qrcode";
+import QRCode from "react-qr-code";
 import { initiateTransaction } from "../utils/merchantHandler";
 
 const LinkSurakshaQR = ({
@@ -28,7 +28,7 @@ const LinkSurakshaQR = ({
   autoInitiate = false,
   onTransactionInitiated,
 }) => {
-  const [qrCodeUrl, setQrCodeUrl] = useState("");
+  const [qrCodeTransactionId, setQrCodeTransactionId] = useState("");
   const [status, setStatus] = useState("");
   const [transactionId, setTransactionId] = useState("");
   const [paymentUrl, setPaymentUrl] = useState("");
@@ -52,21 +52,13 @@ const LinkSurakshaQR = ({
     };
   }, [eventSource]);
 
-  const generateQRCode = async (url) => {
-    try {
-      const qrDataUrl = await QRCode.toDataURL(url, {
-        width: qrSize,
-        margin: 2,
-        color: {
-          dark: "#000000",
-          light: "#FFFFFF",
-        },
-      });
-      setQrCodeUrl(qrDataUrl);
-    } catch (error) {
-      console.error("Error generating QR code:", error);
-      setStatus(statusMessages.error);
-    }
+  const generateQRCode = (transactionId) => {
+    const qrData = {
+      transactionId: transactionId,
+      url: `/merchant/${transactionId}`,
+      gateway: "LinkSuraksha",
+    };
+    return JSON.stringify(qrData);
   };
 
   const handleStatusUpdate = (newStatus) => {
@@ -108,7 +100,8 @@ const LinkSurakshaQR = ({
       setStatus(statusMessages.initiated);
 
       // Generate QR code
-      await generateQRCode(result.paymentUrl);
+      setQrCodeTransactionId(result.transactionId);
+      
 
       setIsLoading(false);
 
@@ -135,7 +128,7 @@ const LinkSurakshaQR = ({
       eventSource.close();
       setEventSource(null);
     }
-    setQrCodeUrl("");
+    setQrCodeTransactionId("");
     setStatus("");
     setTransactionId("");
     setPaymentUrl("");
@@ -151,7 +144,7 @@ const LinkSurakshaQR = ({
         </div>
       )}
 
-      {!autoInitiate && !qrCodeUrl && (
+      {!autoInitiate && !qrCodeTransactionId && (
         <button
           onClick={handleInitiatePayment}
           disabled={isLoading || !amount || amount <= 0}
@@ -177,9 +170,14 @@ const LinkSurakshaQR = ({
         </div>
       )}
 
-      {qrCodeUrl && !isPaymentComplete && (
-        <div className={`qr-code-container ${qrClassName}`}>
-          <img src={qrCodeUrl} alt="Payment QR Code" />
+      {qrCodeTransactionId && !isPaymentComplete && (
+        <div className="flex-col items-center justify-center qr-code-container">
+          <QRCode
+            id="qr-code"
+            size={qrSize}
+            value={generateQRCode(qrCodeTransactionId)}
+            viewBox={`0 0 256 256`}
+          />
           <p>Scan this QR code to complete payment</p>
         </div>
       )}
@@ -198,7 +196,7 @@ const LinkSurakshaQR = ({
         </div>
       )}
 
-      {qrCodeUrl && !isPaymentComplete && (
+      {qrCodeTransactionId && !isPaymentComplete && (
         <div className="payment-actions">
           <button onClick={resetPayment} className="cancel-payment-btn">
             Cancel Payment

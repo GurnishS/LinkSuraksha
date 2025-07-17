@@ -21,4 +21,4 @@ const GenerateToken = (data) => {
   return token;
 };
 
-export {GenerateToken};
+export { GenerateToken };
