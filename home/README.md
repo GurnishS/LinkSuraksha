@@ -1,12 +1,104 @@
-# React + Vite
+# LinkSuraksha Home - Developer Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![LinkSuraksha Logo](public/logo.png)
 
-Currently, two official plugins are available:
+The **LinkSuraksha Home** is a developer dashboard and navigation hub designed to streamline development and monitoring of the entire LinkSuraksha ecosystem. This interface provides developers with quick access to all platform components and real-time service health monitoring.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Purpose
 
-## Expanding the ESLint configuration
+This is **not a user-facing application** but rather a development tool that helps developers:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Navigate between services** - Quick links to all LinkSuraksha components
+- **Monitor service health** - Check if all services are running properly
+- **Centralized access** - Single point of entry for all development environments
+- **Status overview** - Real-time monitoring of system components
+
+## Features
+
+### Service Navigation
+
+- **Quick Access Links**: Direct navigation to all platform components
+  - Banking System (SurakshaBank)
+  - Gateway System (Core Platform)
+  - Merchant Portal
+  - API endpoints
+
+## Project Structure
+
+```
+home/
+├── public/
+│   ├── logo.png          # LinkSuraksha branding
+│   ├── team-photos/      # Team member photos
+│   └── vite.svg         # Vite logo
+├── src/
+│   ├── App.jsx          # Main application component
+│   ├── App.css          # Application styles
+│   ├── main.jsx         # Entry point
+│   └── constants.js     # Configuration constants
+├── index.html           # HTML template
+├── package.json         # Dependencies and scripts
+└── vite.config.js       # Vite configuration
+```
+
+## Installation & Setup
+
+1. **Navigate to the home directory**
+
+   ```bash
+   cd home
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Access the dashboard**
+   ```
+   http://localhost:5171
+   ```
+
+## Monitoring Features
+
+### Service Health Checks
+
+- **Ping Tests**: Regular health checks to all service endpoints
+- **Status Indicators**: Color-coded status for each service
+  - 🟢 Green: Service running and responsive
+  - 🔴 Red: Service down or unreachable
+
+## Team Information
+
+The dashboard displays information about the development team members:
+
+- Team member photos and roles
+- Contact information for collaboration
+- Project responsibility areas
+
+## Integration with Main Ecosystem
+
+The Home dashboard integrates seamlessly with the LinkSuraksha ecosystem:
+
+```
+LinkSuraksha Development Flow
+├── Home Dashboard (Entry Point)
+│   ├── Navigate to → Gateway System
+│   ├── Navigate to → Banking System
+│   ├── Navigate to → Merchant Portal
+│   └── Monitor → All Service Health
+```
+
+## Related Documentation
+
+- [Main LinkSuraksha README](../README.md)
+- [Gateway System](../gateway/README.md)
+- [Banking System](../bank/README.md)
+- [Merchant Portal](../merchant/README.md)
