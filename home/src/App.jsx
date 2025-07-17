@@ -19,10 +19,6 @@ const App = () => {
   });
   const [isLoading, setIsLoading] = useState(true);
 
-  // API endpoints to wake up
-  const MODE = import.meta.env.VITE_MODE || "development"; // Default to development if not set
-  console.log("Current Mode:", MODE);
-
   const apiEndpoints = useMemo(
     () => ({
       gateway: config.GATEWAY_BACKEND_URL + "/health",
