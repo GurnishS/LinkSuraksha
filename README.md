@@ -1,6 +1,8 @@
 # LinkSuraksha - SecureLink Payment Ecosystem
 
-![LinkSuraksha Logo](home/public/logo.png)
+<div align="center">
+  <img src="home/public/logo.png"/>
+</div>
 
 **LinkSuraksha** is a comprehensive privacy-first transaction system that enables secure digital payments without exposing actual bank account details. This innovative platform creates temporary, encrypted "service accounts" that act as isolated digital identities, providing enhanced security and privacy for all financial transactions.
 
