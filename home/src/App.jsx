@@ -194,7 +194,7 @@ const App = () => {
 
         {/* Header */}
         <header className="sticky top-0 z-50 backdrop-blur-xl bg-slate-50/95 border-b border-slate-200">
-          <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center flex-wrap gap-x-2 gap-y-4">
+          <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex justify-between items-center flex-wrap gap-x-2 gap-y-4">
             <div className="flex items-center gap-3 justify-center w-full md:w-auto">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
                 <Shield className="w-5 h-5 text-white" />
@@ -231,15 +231,15 @@ const App = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="py-24 px-8 text-center">
+        <section className="py-8 lg:py-12 px-4 md:px-8 text-center">
           <div className="max-w-7xl mx-auto">
             <div className="mb-8">
               <div className="inline-flex items-center px-4 py-2 bg-blue-100 border border-blue-200 rounded-full text-sm font-semibold text-blue-600">
-                🏆 Hackathon Project 2025
+                🏆Canara Suraksha Hackathon Project 2025
               </div>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-slate-900 via-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight tracking-tight">
+            <h1 className="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-slate-900 via-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight tracking-tight">
               LinkSuraksha
             </h1>
 
@@ -261,7 +261,7 @@ const App = () => {
             </p>
 
             <button
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold text-lg rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="inline-flex items-center gap-3 px-4 md:px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold text-lg rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
               onClick={wakeUpAPIs}
               disabled={isLoading}
             >
@@ -272,7 +272,7 @@ const App = () => {
         </section>
 
         {/* Projects Section */}
-        <section className="py-24 px-8">
+        <section className="py-8 lg:py-12  px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
@@ -363,7 +363,7 @@ const App = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-24 px-8">
+        <section className="py-8 lg:py-12  px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
@@ -382,7 +382,7 @@ const App = () => {
                     className="relative transition-all duration-300 w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(30%-1rem)]"
                   >
                     <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-blue-300 relative w-full">
-                      <div className="relative w-full h-72 overflow-hidden">
+                      <div className="relative w-full aspect-square overflow-hidden">
                         <img
                           src={member.avatar}
                           alt={member.name}
@@ -418,7 +418,7 @@ const App = () => {
         </section>
 
         {/* Technology Stack */}
-        <section className="py-24 px-8">
+        <section className="py-8 lg:py-12 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
@@ -482,7 +482,7 @@ const App = () => {
               ].map((tech, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-slate-200 rounded-2xl p-6 text-center backdrop-blur-xl transition-all duration-300 min-w-48 max-w-72 shadow-sm hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl"
+                  className="bg-white border border-slate-200 rounded-2xl p-6 text-center backdrop-blur-xl transition-all duration-300 w-full sm:w-[calc(50%_-_1.5rem)] md:w-[calc(33.333%_-_1.5rem)] lg:w-[calc(25%_-_1.5rem)] shadow-sm hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl"
                 >
                   <div
                     className="text-5xl mb-4 transition-all duration-300 hover:scale-110"
@@ -501,7 +501,7 @@ const App = () => {
         </section>
 
         {/* Footer */}
-        <footer className="bg-gradient-to-br from-slate-800 to-slate-900 border-t border-slate-700 backdrop-blur-xl py-12 px-8">
+        <footer className="bg-gradient-to-br from-slate-800 to-slate-900 border-t border-slate-700 backdrop-blur-xl py-12  px-4 md:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center text-white">
@@ -518,8 +518,8 @@ const App = () => {
             </div>
 
             <p className="text-base text-slate-400 mb-8">
-              Built with ❤️ for the Hackathon 2025 | Making payments secure and
-              anonymous
+              Built with ❤️ for the Canara Suraksha Hackathon 2025 | Making
+              payments secure and anonymous
             </p>
 
             <div className="flex items-center justify-center gap-4 flex-wrap text-sm text-slate-400">

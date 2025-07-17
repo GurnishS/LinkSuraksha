@@ -2,11 +2,6 @@ export const avatarUri = "/avatar.png";
 
 const isCodespace = import.meta.env.VITE_CODESPACES === "true";
 
-function replaceLocalhost(url) {
-  const localUrl = new URL(url);
-  return `https://${import.meta.env.VITE_CODESPACE_NAME}-${localUrl.port}.app.github.dev`;
-}
-
 const config = {
   GATEWAY_BACKEND_URL: isCodespace
     ? "/gateway-backend"

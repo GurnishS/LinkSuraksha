@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { avatarUri } from "../constants.js";
 import QRCode from "react-qr-code";
 // import { Html5QrcodeScanner } from "html5-qrcode";
@@ -29,7 +29,7 @@ import {
   RefreshCw,
   AlertCircle,
 } from "lucide-react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 import Navbar from "../components/Navbar.jsx";
@@ -52,7 +52,6 @@ const Dashboard = () => {
   const [transactionsError, setTransactionsError] = useState(null);
 
   const navigate = useNavigate();
-  const location = useLocation();
 
   const user = {
     name: sessionStorage.getItem("Name") || undefined,
@@ -87,7 +86,7 @@ const Dashboard = () => {
 
       if (response.ok && data.success) {
         // Transform API data to match component structure
-        const transformedAccounts = data.accounts.map((account, index) => ({
+        const transformedAccounts = data.accounts.map((account) => ({
           id: account._id,
           accountNumber: `****${account.accountNumber.slice(-4)}`,
           actualAccountNumber: account.accountNumber,
@@ -412,31 +411,6 @@ const Dashboard = () => {
       </div>
     </div>
   );
-
-  // Helper function to validate MongoDB ObjectId
-  const isValidObjectId = (id) => {
-    const objectIdRegex = /^[0-9a-fA-F]{24}$/;
-    return objectIdRegex.test(id);
-  };
-
-  // Helper function to extract receiver Id from QR URL
-  const extractReceiverIdFromUrl = (url) => {
-    try {
-      const urlObj = new URL(url);
-      const pathParts = urlObj.pathname.split("/");
-
-      // Check if it's a transfer URL pattern
-      if (pathParts.length >= 3 && pathParts[1] === "transfer") {
-        const receiverId = pathParts[2];
-        if (isValidObjectId(receiverId)) {
-          return receiverId;
-        }
-      }
-      return null;
-    } catch {
-      return null;
-    }
-  };
 
   // Handle QR scan result
   const handleQRScan = (scannedData) => {

@@ -21,7 +21,6 @@ const LinkSurakshaQR = ({
   },
   buttonText = "Generate Payment QR",
   buttonClassName = "",
-  qrClassName = "",
   statusClassName = "",
   amountClassName = "",
   transactionIdClassName = "",
