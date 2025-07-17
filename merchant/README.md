@@ -1,6 +1,8 @@
 # LinkSuraksha Merchant
 
-![alt text](public/logo.png)
+<div align="center">
+  <img src="public/logo.png"/>
+</div>
 A secure merchant payment interface for the LinkSuraksha payment system, built with React and Vite. This application enables merchants to generate QR codes, manage transactions, and process payments securely.
 
 ## Features
