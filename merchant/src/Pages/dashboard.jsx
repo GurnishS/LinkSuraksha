@@ -7,7 +7,6 @@ const Dashboard = () => {
     const [cartItems, setCartItems] = useState([]);
     const [wishlistItems, setWishlistItems] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('All');
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [showCart, setShowCart] = useState(false);
     const navigate = useNavigate()
@@ -164,12 +163,6 @@ const Dashboard = () => {
             <header className="header">
                 <div className="header-content">
                     <div className="logo-section">
-                        <button
-                            className="mobile-menu-btn"
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        >
-                            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                        </button>
                         <h1 className="logo">SurakshaKart</h1>
                     </div>
 
@@ -211,26 +204,6 @@ const Dashboard = () => {
                     </div>
                 </div>
             </header>
-
-            {/* Mobile Menu */}
-            {isMobileMenuOpen && (
-                <div className="mobile-menu">
-                    <div className="mobile-categories">
-                        {categories.map(category => (
-                            <button
-                                key={category}
-                                className={`mobile-category-btn ${selectedCategory === category ? 'active' : ''}`}
-                                onClick={() => {
-                                    setSelectedCategory(category);
-                                    setIsMobileMenuOpen(false);
-                                }}
-                            >
-                                {category}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-            )}
 
             {/* Hero Section */}
             <section className="hero-section">
