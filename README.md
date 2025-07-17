@@ -112,6 +112,75 @@ Each component includes its own development scripts. See individual README files
 - [Banking System Setup](./bank/README.md#installation)
 - [Merchant Portal Guide](./merchant/README.md#installation)
 
+### Dummy User Details
+
+- User1:
+  - Bank
+  ```
+  {
+    "accountNumber": "123456789115",
+    "accountHolder": "Gurnish Singh",
+    "address": "Kota, Rajasthan",
+    "phone": "‪+91-9876543211‬",
+    "ifscCode": "LINK0001234",
+    "branchName": "Kota, Rajasthan",
+    "customerID": "CUST2025002",
+    "password": "MySecurePass@123",
+    "transactionPIN": "4567"
+  }
+  ```
+  - LinkSuraksha Login
+  ```
+  {
+    Email: gurnish@gmail.com
+    Password: 12345678
+  }
+  ```
+
+- User2:
+  - Bank
+  ```
+  {
+    "accountNumber": "123456789116",
+    "accountHolder": "Amandeep Mandal",
+    "address": "Jaipur, Rajasthan",
+    "phone": "‪+91-9876543212‬",
+    "ifscCode": "LINK0001235",
+    "branchName": "Jaipur, Rajasthan",
+    "customerID": "CUST2025003",
+    "password": "MySecurePass@123",
+    "transactionPIN": "4567"
+  }
+  ```
+  - LinkSuraksha Login
+  ```
+  {
+    Email: amandeep@gmail.com
+    Password: 12345678
+  }
+  ```
+- User3:
+  - Bank
+  ```
+  {
+    "accountNumber": "123456789117",
+    "accountHolder": "Harshraj",
+    "address": "Kota, Rajasthan",
+    "phone": "‪+91-9876543213‬",
+    "ifscCode": "LINK0001236",
+    "branchName": "Kota, Rajasthan",
+    "customerID": "CUST2025004",
+    "password": "MySecurePass@123",
+    "transactionPIN": "4567"
+  }
+  ```
+  - LinkSuraksha Login
+  ```
+  {
+    Email: harshraj321@gmail.com
+    Password: HarshRaj
+  }
+  ```
 ## Compliance & Standards
 
 LinkSuraksha is designed with compliance in mind:
