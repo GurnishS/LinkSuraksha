@@ -28,7 +28,7 @@
 </div>
 
 <div align="center">
-   <img src="images/LinkSuraksha-Demo_gif.gif"/>
+   <img src="images/LinkSuraksha-Demo-QR_gif.gif"/>
 </div>
 
 ## Project Structure
