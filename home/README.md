@@ -23,7 +23,6 @@ This is **not a user-facing application** but rather a development tool that hel
   - Banking System (SurakshaBank)
   - Gateway System (Core Platform)
   - Merchant Portal
-  - API endpoints
 
 ## Screenshot
 
@@ -89,7 +88,6 @@ The dashboard displays information about the development team members:
 
 - Team member photos and roles
 - Contact information for collaboration
-- Project responsibility areas
 
 ## Integration with Main Ecosystem
 
