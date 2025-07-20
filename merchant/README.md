@@ -3,38 +3,15 @@
 <div align="center">
   <img src="public/logo.png"/>
 </div>
-A secure merchant payment interface for the LinkSuraksha payment system, built with React and Vite. This application enables merchants to generate QR codes, manage transactions, and process payments securely.
+A secure merchant payment interface for the LinkSuraksha payment system, built with React and Vite. This application is an E-commerce website to demonstrate transaction on online platform via LinkSuraksha Gateway.
 
 ## Features
 
-- **QR Code Generation**: Dynamic QR code generation for secure payment transactions
-- **Payment Dashboard**: Real-time transaction monitoring and management
 - **Shopping Cart**: Integrated cart system for order management
 - **Secure Payments**: JWT-based authentication and secure payment processing
 - **Responsive Design**: Modern UI with Tailwind CSS and Lucide icons
 
 ## Screenshots
-
-## Installation
-
-1. Clone the repository
-
-```bash
-git clone <repository-url>
-cd linksuraksha-merchant
-```
-
-2. Install dependencies
-
-```bash
-npm install
-```
-
-3. Start the development server
-
-```bash
-npm run dev
-```
 
 ## Project Structure
 
@@ -51,3 +28,23 @@ src/
 │   └── merchantHandler.js
 └── App.jsx             # Main application component
 ```
+## Installation
+
+1. Clone the repository
+
+```bash
+cd merchant
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Start the development server
+
+```bash
+npm run dev
+```
+
