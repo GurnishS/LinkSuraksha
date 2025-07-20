@@ -1,6 +1,8 @@
 # LinkSuraksha Home - Developer Dashboard
 
-![LinkSuraksha Logo](public/logo.png)
+<div align="center">
+  <img src="public/logo.png"/>
+</div>
 
 The **LinkSuraksha Home** is a developer dashboard and navigation hub designed to streamline development and monitoring of the entire LinkSuraksha ecosystem. This interface provides developers with quick access to all platform components and real-time service health monitoring.
 
