@@ -14,17 +14,22 @@
 - **Role-based Access** - Admin and user role separation
 
 ## Screenshots
+
 <div>
   <strong>Payment via Account Number</strong>
 </div>
 
-![alt text](images/LinkSuraksha-Demo[gif].gif)
+<div align="center">
+   <img src="images/LinkSuraksha-Demo[gif].gif"/>
+</div>
 
 <div>
   <strong>Payment via QR</strong>
 </div>
 
-![alt text](images/LinkSuraksha-Demo[gif].gif)
+<div align="center">
+   <img src="images/LinkSuraksha-Demo[gif].gif"/>
+</div>
 
 ## Project Structure
 
@@ -59,8 +64,6 @@ frontend/
    ```bash
    cd backend
    npm install
-   cp .env.example .env
-   # Configure your environment variables
    npm run dev
    ```
 
@@ -70,24 +73,4 @@ frontend/
    cd frontend
    npm install
    npm run dev
-   ```
-
-4. **Environment Configuration**
-
-   Create `.env` files in both backend and frontend directories:
-
-   **Backend `.env`:**
-
-   ```env
-   PORT=8000
-   MONGODB_URI=mongodb://localhost:27017/linksuraksha
-   CORS_ORIGIN=http://localhost:5173
-   JWT_SECRET=your-jwt-secret
-   JWT_EXPIRY=7d
-   ```
-
-   **Frontend `.env`:**
-
-   ```env
-   VITE_API_URL=http://localhost:8000
    ```

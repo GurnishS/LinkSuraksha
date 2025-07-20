@@ -75,14 +75,22 @@ Secure merchant payment interface for business transaction management.
 - **Features**: QR code generation, payment dashboard, shopping cart integration
 - **Tech Stack**: React, Vite, Tailwind CSS
 
+### [Home Interface](./home/README.md)
+
+Developer dashboard and navigation hub for easy access to all LinkSuraksha components.
+
+- **Location**: `./home/`
+- **Features**: Service status monitoring, quick navigation to all platforms (Bank, Merchant, Gateway), health checks
+- **Tech Stack**: React, Vite
+
 ### Access Points
 
-- **Home Interface**: http://localhost:3000
-- **Gateway Frontend**: http://localhost:3001
-- **Banking Frontend**: http://localhost:3002
-- **Merchant Portal**: http://localhost:5173
-- **Gateway API**: http://localhost:8000
-- **Banking API**: http://localhost:8001
+- **Home Interface**: http://localhost:5171
+- **Gateway Frontend**: http://localhost:5174
+- **Banking Frontend**: http://localhost:5173
+- **Merchant Portal**: http://localhost:5172
+- **Gateway API**: http://localhost:8001
+- **Banking API**: http://localhost:8000
 
 ## Security & Privacy
 
@@ -115,7 +123,9 @@ Each component includes its own development scripts. See individual README files
 ### Dummy User Details
 
 - User1:
+
   - Bank
+
   ```
   {
     "accountNumber": "123456789115",
@@ -129,11 +139,14 @@ Each component includes its own development scripts. See individual README files
     "transactionPIN": "4567"
   }
   ```
-  - LinkSuraksha Login
+
+  - LinkSuraksha
+
   ```
   {
     Email: gurnish@gmail.com
     Password: 12345678
+    Transaction-PIN: 123456
   }
   ```
 
@@ -152,11 +165,12 @@ Each component includes its own development scripts. See individual README files
     "transactionPIN": "4567"
   }
   ```
-  - LinkSuraksha Login
+  - LinkSuraksha
   ```
   {
     Email: amandeep@gmail.com
     Password: 12345678
+    Transaction-PIN: 123456
   }
   ```
 - User3:
@@ -174,13 +188,15 @@ Each component includes its own development scripts. See individual README files
     "transactionPIN": "4567"
   }
   ```
-  - LinkSuraksha Login
+  - LinkSuraksha
   ```
   {
     Email: harshraj321@gmail.com
     Password: HarshRaj
+    Transaction-PIN: 123456
   }
   ```
+
 ## Compliance & Standards
 
 LinkSuraksha is designed with compliance in mind:

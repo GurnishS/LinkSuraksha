@@ -15,7 +15,9 @@
 
 ## Screenshots
 
-![alt text](images/Bank-Demo-[gif].gif)
+<div align="center">
+   <img src="images/Bank-Demo-[gif].gif"/>
+</div>
 
 ## Project Structure
 
@@ -59,20 +61,6 @@ SurakshaBank/
    npm install
    ```
 
-4. Create environment files
-
-   - Create `.env` in the backend directory with:
-     ```
-     MONGODB_URI=mongodb://localhost:27017
-     JWT_SECRET=your_secret_key
-     CORS_ORIGIN=http://localhost:5173
-     ```
-   - Create `.env` in the frontend directory with:
-     ```
-     VITE_BACKEND_URL=http://localhost:8000/api/
-     VITE_GATEWAY_URL=http://localhost:8000/gateway/
-     ```
-
-5. Start the application
+4. Start the application
    - Backend: `npm run dev`
    - Frontend: `npm run dev`
