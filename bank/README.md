@@ -16,7 +16,7 @@
 ## Screenshots
 
 <div align="center">
-   <img src="images/Bank-Demo-[gif].gif"/>
+   <img src="images/Bank-Demo_gif.gif"/>
 </div>
 
 ## Project Structure
