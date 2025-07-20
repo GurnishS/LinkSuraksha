@@ -26,7 +26,7 @@ This is **not a user-facing application** but rather a development tool that hel
 ## Screenshot
 
 <div align="center">
-   <img src="public/home[gif].gif"/>
+   <img src="public/home_gif.gif"/>
 </div>
 
 ## Project Structure
