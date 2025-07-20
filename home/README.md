@@ -1,6 +1,8 @@
 # LinkSuraksha Home - Developer Dashboard
 
-![LinkSuraksha Logo](public/logo.png)
+<div align="center">
+  <img src="public/logo.png"/>
+</div>
 
 The **LinkSuraksha Home** is a developer dashboard and navigation hub designed to streamline development and monitoring of the entire LinkSuraksha ecosystem. This interface provides developers with quick access to all platform components and real-time service health monitoring.
 
@@ -21,12 +23,11 @@ This is **not a user-facing application** but rather a development tool that hel
   - Banking System (SurakshaBank)
   - Gateway System (Core Platform)
   - Merchant Portal
-  - API endpoints
 
 ## Screenshot
 
 <div align="center">
-   <img src="public/home[gif].gif"/>
+   <img src="public/home_gif.gif"/>
 </div>
 
 ## Project Structure
@@ -87,7 +88,6 @@ The dashboard displays information about the development team members:
 
 - Team member photos and roles
 - Contact information for collaboration
-- Project responsibility areas
 
 ## Integration with Main Ecosystem
 

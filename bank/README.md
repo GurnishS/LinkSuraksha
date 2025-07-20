@@ -8,15 +8,13 @@
 - **Account Dashboard** - View account summary and balance
 - **Transaction Management** - Send, receive, and track financial transactions
 - **Transaction History** - Detailed view of past transactions with status tracking
-- **Real-time Notifications** - Updates on transaction status changes
-- **Bank-grade Security** - 256-bit SSL encryption to protect user data
-- **24/7 Access** - Banking services available anytime, anywhere
+- **Bank-grade Security** - AES encryption to protect user data
 - **Logging** - Logs are saved to files organized by date and type for easy troubleshooting and auditing.
 
 ## Screenshots
 
 <div align="center">
-   <img src="images/Bank-Demo-[gif].gif"/>
+   <img src="images/Bank-Demo_gif.gif"/>
 </div>
 
 ## Project Structure
@@ -24,16 +22,21 @@
 ```
 SurakshaBank/
 ├── backend/
+│   ├── controllers/    # Functionalities
+│   ├── db/             # Database setup
+│   ├── enums/          # Constant values and enumerations
 │   ├── models/         # Database models
 │   ├── routes/         # API routes
 │   ├── utils/          # Utility functions and logging
 │   ├── middleware/     # Express middleware
+│   ├── constants.js/   # Configuration constants
 │   └── app.js          # Express application setup
 │
 ├── frontend/
     ├── src/
     │   ├── pages/      # React components for pages
     │   ├── styles/     # CSS modules
+    │   ├── App.jsx/     
     │   └── constants.js # Configuration constants
     └── index.html      # Entry HTML file
 ```
@@ -43,8 +46,7 @@ SurakshaBank/
 1. Clone the repository
 
    ```
-   git clone https://github.com/yourusername/SurakshaBank.git
-   cd SurakshaBank
+   cd bank
    ```
 
 2. Install backend dependencies
@@ -52,15 +54,13 @@ SurakshaBank/
    ```
    cd backend
    npm install
+   npm run dev
    ```
 
 3. Install frontend dependencies
 
    ```
-   cd ../frontend
+   cd frontend
    npm install
+   npm run dev
    ```
-
-4. Start the application
-   - Backend: `npm run dev`
-   - Frontend: `npm run dev`
