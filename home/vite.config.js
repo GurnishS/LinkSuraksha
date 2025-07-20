@@ -18,27 +18,27 @@ export default defineConfig({
     port: 5171,
     proxy: {
       '/gateway-backend/': {
-        target: process.env.GATEWAY_BACKEND_URL,
+        target: process.env.VITE_GATEWAY_BACKEND_URL,
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/gateway-backend/, '')
       },
       '/bank-backend/': {
-        target: process.env.BANK_BACKEND_URL,
+        target: process.env.VITE_BANK_BACKEND_URL,
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/bank-backend/, '')
       },
       '/gateway-frontend/': {
-        target: process.env.GATEWAY_FRONTEND_URL,
+        target: process.env.VITE_GATEWAY_FRONTEND_URL,
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/gateway-frontend/, '')
       },
       '/bank-frontend/': {
-        target: process.env.BANK_FRONTEND_URL,
+        target: process.env.VITE_BANK_FRONTEND_URL,
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/bank-frontend/, '')
       },
       '/merchant-frontend/': {
-        target: process.env.MERCHANT_FRONTEND_URL,
+        target: process.env.VITE_MERCHANT_FRONTEND_URL,
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/merchant-frontend/, '')
       },

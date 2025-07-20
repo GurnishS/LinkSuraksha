@@ -1,4 +1,5 @@
 import { SignJWT } from 'jose';
+import config from '../constants';
 
 // Generate JWT token for gateway authentication
 const GenerateToken = async () => {
@@ -31,16 +32,11 @@ const GenerateToken = async () => {
 };
 
 export const initiateTransaction = async (amount, setStatusCallback) => {
-  const gatewayUri = import.meta.env.VITE_GATEWAY_URI;
   
-  if (!gatewayUri) {
-    throw new Error("Missing required environment variable: VITE_GATEWAY_URI");
-  }
-
   const token = await GenerateToken();
 
   try {
-    const response = await fetch(`${gatewayUri}/initiate-transaction`, {
+    const response = await fetch(`${config.GATEWAY_BACKEND_URL}/merchant/initiate-transaction`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -61,7 +57,7 @@ export const initiateTransaction = async (amount, setStatusCallback) => {
     const { transactionId, paymentUrl } = await response.json();
     
 
-    const sseUrl = `${gatewayUri}/sse?token=${token}&receiverServiceAccountId=${import.meta.env.VITE_RECEIVER_SERVICE_ACCOUNT_ID}&transactionId=${transactionId}&apiKey=${import.meta.env.VITE_API_KEY}`;
+    const sseUrl = `${config.GATEWAY_BACKEND_URL}/merchant/sse?token=${token}&receiverServiceAccountId=${import.meta.env.VITE_RECEIVER_SERVICE_ACCOUNT_ID}&transactionId=${transactionId}&apiKey=${import.meta.env.VITE_API_KEY}`;
 
     const eventSource = new EventSource(sseUrl);
 
