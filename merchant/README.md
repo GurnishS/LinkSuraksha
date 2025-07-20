@@ -13,6 +13,10 @@ A secure merchant payment interface for the LinkSuraksha payment system, built w
 
 ## Screenshots
 
+<div align="center">
+  <img src="public/Merchant-Demo_gif.gif"/>
+</div>
+
 ## Project Structure
 
 ```
